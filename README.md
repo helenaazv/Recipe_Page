@@ -2,7 +2,7 @@
 This is my solution to the "Recipe page" challenge from [Front End Mentor](https://www.frontendmentor.io/)
 
 
-### Screenshot
+### Desktop Overview
 
 ![](DesktopResult.png)
 
