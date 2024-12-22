@@ -1,0 +1,158 @@
+.column {
+    width: 100%;
+}
+
+/*To make sure there's no white side Margin*/
+body, .column {
+    margin: 0;
+    padding: 0;
+}
+
+/*Image fits the screen*/
+.column img {
+    width: 100%; 
+    height: auto; 
+    margin: 0;
+    padding: 0;
+}
+
+/*Same left and right margin for all text*/
+.column p, .column h1, .column h2, .column h3, .column h4, .column h5, .column h6, .column table {
+    margin-left: 30px;  
+    margin-right: 30px; 
+    line-height: 1.3;
+}
+
+/*Alligns list with the text*/
+.column ul, .column ol {
+    margin: 0;
+    padding: 0;
+    margin-left: 55px; 
+    margin-right: 55px;
+    list-style-position: outside; 
+    line-height: 2;
+    
+}
+
+/*Add color to the markers*/
+.column ul li::marker, .column ol li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+
+/*Purple Flex Box*/
+.flex { 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start; 
+    background-color:hsl(330, 100%, 98%);
+    padding: 0.5rem 0.5rem 1rem 0.5rem; /*space text inside the box */
+    margin: 2rem; /*space of the box in the screen*/
+    width: auto; 
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.flex ul li::marker {
+    color: hsl(332, 51%, 32%);   
+}
+
+#flexText {
+    color: hsl(332, 51%, 32%);
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Outfit';
+
+
+}
+
+/*Text Set Up*/
+.description {
+    font-family: 'Outfit';
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*Title Set Up*/
+#title {
+    color: hsl(24, 5%, 18%);
+    font-size: 35px;
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+
+/*Subtitle Set Up*/
+.subtitle {
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif";
+    font-weight: 400;
+
+}
+
+/*Table Set Up*/
+.table {
+    width: calc(100% - 60px); 
+    margin: 1.6rem 30px;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid hsl(0, 0%, 85%); 
+    font-family: 'Outfit';
+}
+  
+/*Column 1 font-color Set Up*/
+.descrip{
+    color: hsl(30, 10%, 34%);
+}
+
+/*Column 2 font-color Set Up*/
+.amount{
+    color: hsl(14, 45%, 36%);
+    font-weight: 800;
+}
+
+
+/*Mobile First Approach - Adjustment for Desktop*/
+@media screen and (min-width: 600px) {
+    body {
+        background-color: #f4eadd; 
+        margin: 0; 
+        padding: 2rem 0; 
+    }
+
+    .column {
+        background-color: #fff; 
+        padding: 2rem; 
+        border-radius: 10px; 
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+        max-width: 800px; 
+        margin: 0 auto; 
+        width: calc(100% - 40px); 
+    }
+
+    .column img {
+        width: calc(100% - 60px); /*image responsiveness*/
+        border-radius: 10px; 
+        margin-bottom: 1.5rem; 
+        margin-left: 30px;  
+        margin-right: 30px;
+    }
+
+    #title {
+        font-size: 2.5rem; 
+        margin-bottom: 1rem;
+    }
+
+    #description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
